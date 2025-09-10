@@ -21,9 +21,9 @@ LANGFUSE_HOST=https://us.cloud.langfuse.com,
 GKey=your-gemini-api-key,
 ________________________________________
 ▶️ Usage
-Run the notebook
-Open Notebook_Test.ipynb in Jupyter and execute step by step.
-Run the script: run agent_script.py in your vs code or any ide
+
+Open ->  Notebook_Test.ipynb in Jupyter and execute step by step.
+Run the script-> run agent_script.py in your vs code or any ide.
 
 Example query inside the agent:
 agent.run("How to create material in Blender using Python? Use the RAG tool.")
