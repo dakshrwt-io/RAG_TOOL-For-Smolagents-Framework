@@ -30,7 +30,7 @@ Run the script-> run agent_script.py in your vs code or any ide.
 
 Example query inside the agent:
 
-query = ("who is Nikola Tesla")
+query = "who is Nikola Tesla"
 
 ________________________________________
 🛡️ Notes
