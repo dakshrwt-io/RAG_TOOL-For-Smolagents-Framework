@@ -23,6 +23,7 @@ ________________________________________
 ▶️ Usage
 
 Open ->  Notebook_Test.ipynb in Jupyter and execute step by step.
+
 Run the script-> run agent_script.py in your vs code or any ide.
 
 Example query inside the agent:
