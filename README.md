@@ -14,11 +14,11 @@ pip install -r requirements.txt
 ________________________________________
 🔑 Environment Variables
 Create a .env file. Example:
-KEY=your-openai-api-key
-LANGFUSE_SECRET_KEY=your-langfuse-secret
-LANGFUSE_PUBLIC_KEY=your-langfuse-public
-LANGFUSE_HOST=https://us.cloud.langfuse.com
-GKey=your-gemini-api-key
+KEY=your-openai-api-key,
+LANGFUSE_SECRET_KEY=your-langfuse-secret,
+LANGFUSE_PUBLIC_KEY=your-langfuse-public,
+LANGFUSE_HOST=https://us.cloud.langfuse.com,
+GKey=your-gemini-api-key,
 ________________________________________
 ▶️ Usage
 Run the notebook
