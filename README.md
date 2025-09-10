@@ -29,9 +29,9 @@ OR
 Run the script-> run agent_script.py in your vs code or any ide.
 
 Example query inside the agent:
-agent.run("How to create material in Blender using Python? Use the RAG tool.")
-Or directly use the tool:
-print(rag_tool("Explain how to apply materials in Blender"))
+
+query = ("who is Nikola Tesla")
+
 ________________________________________
 🛡️ Notes
 •	Minimal dependencies are included, Langfuse is optional.
