@@ -22,8 +22,8 @@ GKey=your-gemini-api-key,
 ________________________________________
 ▶️ Usage
 
-Open ->  Notebook_Test.ipynb in Jupyter and execute step by step.
-
+Open ->  Notebook_Test.ipynb in Jupyter and execute step by step.(Not for now)
+OR
 Run the script-> run agent_script.py in your vs code or any ide.
 
 Example query inside the agent:
