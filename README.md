@@ -1,12 +1,7 @@
 🤖 Simple RAG Agent Project
 This is a minimal repository demonstrating how to build a Retrieval-Augmented Generation (RAG) system using: - Smolagents (for agent orchestration) - LlamaIndex (for document indexing & querying) - Langfuse (optional) for tracing & observability
 It includes a Jupyter notebook and a simple Python script showing how to: 1. Load and split documents. 2. Create vector + summary indexes. 3. Expose them as a tool (RagTool). 4. Run a CodeAgent with tool usage.
-________________________________________
-📂 Repository Contents
-my-rag-agent/
-│── Notebook_Test.ipynb        # Jupyter notebook with end-to-end setup
-│── agent_script.py            # Python script with agent + tool definition
-│── README.md                  # Project documentation (this file)
+
 ________________________________________
 ⚙️ Requirements
 Install the minimal dependencies:
