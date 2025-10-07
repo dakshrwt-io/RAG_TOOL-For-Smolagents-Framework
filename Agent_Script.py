@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 from smolagents.tools import BaseTool
 
 #%% Api Key Setup
-load_dotenv("enter your env file path")
+load_dotenv()
 ApiKey = os.getenv('KEY')
 Skey = os.getenv("LANGFUSE_SECRET_KEY")
 pKey = os.getenv("LANGFUSE_PUBLIC_KEY")
@@ -52,9 +52,7 @@ except ImportError:
 #%% RAG Setup 
 # Check if files exist, Enter your files
 file_paths = [
-    r"D:\PROGRAMMING\rag D1.txt",
-    r"D:\PROGRAMMING\rag D2.txt",
-    r"D:\PROGRAMMING\rag_D3.txt"
+    r"C:\Users\Asus\OneDrive\Documents\ai agent bootcamp links.txt"
 ]
 
 existing_files = [f for f in file_paths if os.path.exists(f)]
@@ -168,7 +166,7 @@ except Exception as e:
 #%% Agent Query
 if __name__ == "__main__":
 
-    query = "Enter Your Query" #Enter Your Query here
+    query = "List all the links present in the document" #Enter Your Query here
 
     try:
         print("Running agent query...")
@@ -187,3 +185,5 @@ if __name__ == "__main__":
             print(direct_response)
         except Exception as e2:
             print(f"Direct RAG query also failed: {e2}")
+
+# %%
