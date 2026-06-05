@@ -24,11 +24,11 @@ pip install chromadb openai litellm pydantic python-dotenv
 ```
 
 Core dependencies:
-- `chromadb>=0.4.0` — Vector database
-- `openai>=1.0.0` — OpenAI embeddings & LLM API
-- `litellm>=1.0.0` — LLM wrapper for reranking
-- `pydantic>=2.0.0` — Data validation
-- `python-dotenv>=1.0.0` — Environment variable management
+- `chromadb` — Vector database
+- `openai` — OpenAI embeddings & LLM API
+- `litellm` — LLM wrapper for reranking
+- `pydantic` — Data validation
+- `python-dotenv` — Environment variable management
 
 ________________________________________
 🔑 Environment Variables
@@ -127,16 +127,6 @@ from rag_tool.documents import load_documents
 from rag_tool.chunking import create_chunks_local
 from rag_tool.storage import query_collection
 ```
-
-________________________________________
-🛡️ Notes
-
-- **No LLM cost for chunking** — Uses local character-based splitting with overlap
-- **Flexible retrieval** — Enable/disable reranking per query
-- **Persistent storage** — Chroma DB stored locally in `chroma_db/` folder
-- **Modular design** — Import and use individual modules
-- **Type hints** — Full Pydantic validation for Results
-
 ________________________________________
 📝 API Reference
 
