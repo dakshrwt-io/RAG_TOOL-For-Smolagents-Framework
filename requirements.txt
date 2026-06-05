@@ -1,0 +1,11 @@
+# Core RAG Tool Dependencies
+chromadb
+openai
+litellm
+pydantic
+python-dotenv
+aiohttp
+
+# Optional: For extended functionality
+numpy
+scikit-learn

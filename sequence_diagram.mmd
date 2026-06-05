@@ -1,0 +1,36 @@
+sequenceDiagram
+    autonumber
+    actor User
+    participant RagTool as rag_tool.py
+    participant FS as FileSystem
+    participant Chroma as ChromaDB
+    participant OpenAI as OpenAI Embeddings
+    participant Reranker as LLM Reranker
+
+    rect rgba(230, 245, 255, 0.5)
+    User->>RagTool: upload_doc(input_paths, ...)
+    RagTool->>FS: _load_documents(paths)
+    FS-->>RagTool: documents[{text, source, type}]
+    RagTool->>RagTool: _create_chunks_local(docs)
+    RagTool->>RagTool: _split_text(text, size, overlap)
+    RagTool-->>RagTool: chunks[Result]
+    RagTool->>OpenAI: embeddings.create(texts)
+    OpenAI-->>RagTool: vectors
+    RagTool->>Chroma: add(ids, embeddings, documents, metadatas)
+    Chroma-->>RagTool: count
+    RagTool-->>User: {documents, chunks, stored}
+    end
+
+    rect rgba(245, 235, 255, 0.5)
+    User->>RagTool: retrieve(query, ...)
+    RagTool->>OpenAI: embeddings.create([query])
+    OpenAI-->>RagTool: query_embedding
+    RagTool->>Chroma: query(query_embedding, k)
+    Chroma-->>RagTool: documents + metadatas
+    RagTool->>RagTool: build Result list
+    alt rerank = True
+        RagTool->>Reranker: rerank(question, chunks)
+        Reranker-->>RagTool: reordered chunks
+    end
+    RagTool-->>User: List[Result]
+    end
